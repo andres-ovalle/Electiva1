@@ -1,0 +1,30 @@
+<p>{{hola}}</p>
+<p>{{numero}}</p>
+
+<ul *ngIf="usuario.activo">
+    <li>Nombre: {{usuario.nombre}}</li>
+    <li>Edad: {{usuario.edad}}</li>
+</ul>
+
+<p>Con for</p>
+
+<div style="display: flex;">
+    <div >
+        <ul style="margin-right: 2em;" *ngFor="let u of lista">
+            <li *ngIf="u.activo">Nombre: {{u.nombre}}</li>
+            <li *ngIf="u.activo">Edad: {{u.edad}}</li>
+            <li *ngIf="u.activo"><button (click)="asignar(u)">Ver detalle</button></li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>Detalle</h1>
+        <ul>
+            <li>Nombre: {{usuarioSeleccionado.nombre}}</li>
+            <li>Edad: {{usuarioSeleccionado.edad}}</li>
+            <li>Documento: {{usuarioSeleccionado.numeroDocumento}}</li>
+            <li>Telefono: {{usuarioSeleccionado.telefono}}</li>
+            <li>Direccion: {{usuarioSeleccionado.direccion}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Proyecto Clase</span>
+    <span class="example-spacer"></span>
+
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+        <p>Menu</p>
+  
+
+        <div>
+            <mat-list>
+                <mat-list-item>
+                    <a mat-button routerLink="/componente">
+                        <mat-icon>home</mat-icon> Primer Componente</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-button routerLink="/formulario">
+                    <mat-icon></mat-icon> Formulario</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-button routerLink="/componente3">
+                        <mat-icon></mat-icon> Componente 3</a>
+                    
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-button routerLink="/registro-usuario">
+                    <mat-icon></mat-icon> Resgistrar Usuario</a>
+                </mat-list-item>
+            </mat-list>
+        </div>
+
+    </mat-drawer>
+
+    <div class="example-sidenav-content">
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+</mat-drawer-container>
