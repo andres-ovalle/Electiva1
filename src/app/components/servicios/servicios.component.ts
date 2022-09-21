@@ -12,7 +12,7 @@ import { ServicesService } from '../../services/services.service';
 })
 export class ServiciosComponent implements OnInit {
 
-  public episiodios: any
+  public episodios: any;
 
   constructor(public _UsuarioService: ServicesService) { }
 
@@ -20,9 +20,9 @@ export class ServiciosComponent implements OnInit {
     this._UsuarioService.getEpisodios()
       .subscribe(
         (data) => {
-          this.episiodios = data;
+          this.episodios = data;
 
-          console.log(this.episiodios)
+          console.log(this.episodios)
         }
 
       )};
