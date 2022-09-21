@@ -14,30 +14,17 @@ export class ServiciosComponent implements OnInit {
 
   public episodios : any;
 
-  constructor(public _UsuarioService: ServicesService) { }
+  constructor(private _UsuarioService: ServicesService) { }
 
   ngOnInit(): void {
     this._UsuarioService.getEpisodios()
       .subscribe(
         (data) => {
           this.episodios = data;
-
           console.log(this.episodios)
         }
-
       )};
 
-    /*
-   .suscribe(
-     (data)==> {
-       this.episiodios = data
-       console.log(data)
-     },(error)==>{
-
-       console.log(error)
-       }
-       
-     }
-     */
+  
 
 }

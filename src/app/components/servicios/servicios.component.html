@@ -1,6 +1,14 @@
 
 <div class="container">
 
-    <p>{{episodios}}</p>
+    <ul>
+        <li *ngFor="let episodio of episodios.results" > 
+            <p>{{episodio.id}},{{episodio.name}}</p>
+        
+            <a [href]="episodio.url"> Ver capitulo</a>
+        </li>
+        <hr>
+
+    </ul>
 
 </div>
