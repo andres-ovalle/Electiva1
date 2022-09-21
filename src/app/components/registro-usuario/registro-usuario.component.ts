@@ -19,6 +19,8 @@ export class RegistroUsuarioComponent implements OnInit {
   }
 
   registrarUsuario(){
+   
     console.log(this.usuario)
+    
   }
 }

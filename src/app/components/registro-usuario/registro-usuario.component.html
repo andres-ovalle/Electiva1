@@ -7,9 +7,40 @@
 
         <div class="row">
             <mat-form-field appearance="outline">
+                <mat-label> Número Documento</mat-label>
+                <input matInput type="text" name="NumeroDocumento" #numeroDocumento="ngModel" [(ngModel)]="usuario.numeroDocumento"
+                    required>
+                <mat-error *ngIf="numeroDocumento.touched && !numeroDocumento.valid">
+                    Número Documento <strong>requiredo</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
                 <mat-label>Nombre</mat-label>
                 <input matInput type="text" name="nombre" #nombre="ngModel" [(ngModel)]="usuario.nombre" required>
                 <mat-error  *ngIf="nombre.touched && !nombre.valid" style="color: red;">* Este campo es obligatorio!</mat-error >
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Edad</mat-label>
+                <input matInput type="number" name="edad" #edad="ngModel" [(ngModel)]="usuario.edad" required>
+                <mat-error  *ngIf="edad.touched && !edad.valid" style="color: red;">* Este campo es obligatorio!</mat-error >
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label> Telefono</mat-label>
+                <input matInput type="text" name="telefono" #telefono="ngModel" [(ngModel)]="usuario.telefono"
+                    required>
+                <mat-error *ngIf="telefono.touched && !telefono.valid">
+                    Telefono <strong>requiredo</strong>
+                </mat-error>
+                
             </mat-form-field>
         </div>
 
@@ -19,10 +50,16 @@
                 <input matInput type="text" name="direccion" #direccion="ngModel" [(ngModel)]="usuario.direccion"
                     required>
                 <mat-error *ngIf="direccion.touched && !direccion.valid">
-                    Direccion <strong>required</strong>
+                    Direccion <strong>requiredo</strong>
                 </mat-error>
+
             </mat-form-field>
         </div>
-        <input type="submit" value="Guardar" [disabled]="!FormRegistro.form.valid">
+        
+        <input type="submit" value="Guardar" [disabled]="!FormRegistro.form.valid"/>
+        
+    </div>
+    <div>
+        <h1> usuario Registrados </h1>
     </div>
 </form>

@@ -12,7 +12,7 @@ import { ServicesService } from '../../services/services.service';
 })
 export class ServiciosComponent implements OnInit {
 
-  public episodios: any;
+  public episodios : any;
 
   constructor(public _UsuarioService: ServicesService) { }
 
